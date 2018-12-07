@@ -32,7 +32,12 @@
 
       <!-- Header -->
       <header id="header" class="alt">
-	<h1><a href="index.html">Rucio</a></h1>
+					<a href="index.html">
+							<span id="logo-container">
+								<img src='images/wide_logo2.png'/>
+							</span>
+						</a>
+
 	<nav id="nav">
 	  <ul>
 	    <li class="special">
@@ -42,10 +47,11 @@
 		  <li><a class="icon fa-code" href="https://github.com/rucio/rucio">&nbsp;Get the code</a></li>
 		  <li><a class="icon fa-cubes" href="https://hub.docker.com/u/rucio/">&nbsp;Grab the dockers</a></li>
 		  <li><a class="icon fa-file-text-o" href="https://rucio.readthedocs.org">&nbsp;Read the docs</a></li>
-		  <li><a class="icon fa-envelope-o" href="mailto:rucio-dev@cern.ch?subject=Hello!">&nbsp;Send us an email</a></li>
-		  <li><a class="icon fa-comments-o" href="https://rucio.slack.com">&nbsp;Chat with us</a></li>
-		  <li><a class="icon fa-exclamation-circle" href="https://indico.cern.ch/event/676472/">&nbsp;Community Workshop</a></li>
-		  <li><a class="icon fa-book" href="publications.html">&nbsp;Publications</a></li>
+		  <li><a class="icon fa-comments-o" href="contact.html">&nbsp;Contact us</a></li>
+		  <li><a class="icon fa-exclamation-circle" href="https://indico.cern.ch/event/773489/">&nbsp;Community Workshop</a></li>
+			<li><a class="icon fa-book" href="publications.html">&nbsp;Publications</a></li>
+			<li><a class="icon fa-calendar" href="events.html">&nbsp;Events</a></li>
+			<li><a class="icon fa-download" href="downloads.html">&nbsp;Downloads</a></li>
 		</ul>
 	      </div>
 	    </li>
@@ -58,7 +64,25 @@
 	  <header class="major">
 	    <h2>Publications</h2>
 	    <p>The architecture, design, concepts, implementation, and operational experience behind Rucio is backed by a number of peer-reviewed publications, including journal articles, conference proceedings, and doctoral theses.</p>
-	  </header>
+		</header>
+		<section class="bottom-margin">
+			<h2>Recommended for citation</h2>
+			<p>Barisits, Beermann, Garonne, Javurek, Lassnig, Serfon, <em>The ATLAS Data Management System Rucio: Supporting LHC Run-2 and beyond</em>, ACAT, Seattle, 2017</p>
+			<section class="bibtex">
+				<pre>@inproceedings{barisits2018atlas,
+    title={The ATLAS Data Management System Rucio:
+           Supporting LHC Run-2 and beyond},
+    author={Barisits, M and Beermann, Thomas and Garonne, V and Javurek,
+            T and Lassnig, M and Serfon, C and ATLAS collaboration and others},
+    booktitle={Journal of Physics: Conference Series},
+    volume={1085},
+    number={3},
+    pages={032030},
+    year={2018},
+    organization={IOP Publishing}
+}</pre>
+			</section>
+		</section>
 	  <section>
 	    <h2>Doctoral and Master's Theses</h2>
 	    <ul style="font-size:small;text-align:left;">
@@ -136,7 +160,7 @@
 	    <p>We are always happy to chat. You can drop us a mail and we will reply as quickly as possible.</p>
 	  </header>
 	  <ul class="actions vertical">
-	    <li><a href="mailto:rucio-dev@cern.ch?subject=Hello!" class="button special">Contact the developers</a></li>
+	    <li><a href="contact.html" class="button special">Contact the developers</a></li>
 	    <li><a href="mailto:rucio-users@googlegroups.com?subject=Hello!" class="button special">Post to the mailing list</a></li>
 	  </ul>
 

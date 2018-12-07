@@ -209,9 +209,25 @@
 		&.special {
 			text-align: center;
 		}
+
+		&.bottom-margin {
+			margin-bottom: 50px;
+		}
+
+		&.bibtex {
+			text-align: left;
+			overflow: auto;
+			border: 1px solid white;
+			padding: 10px;
+
+			pre {
+				margin: 0;
+			}
+		}
 	}
 
 	header {
+
 		p {
 			color: _palette(fg-light);
 			position: relative;
@@ -504,6 +520,7 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
+		width: 100%;
 
 		img {
 			border-radius: 3px;
@@ -1378,13 +1395,24 @@
 		width: 100%;
 		z-index: _misc(z-index-base);
 
+		#logo-container {
+			position: absolute;
+			top: 0;
+			left: 1.25em;
+			display: flex;
+			height: 100%;
+			align-items: center;
+		}
+		
+		img {
+			height: 30px;
+		}
+
 		h1 {
 			@include vendor('transition', 'opacity #{_duration(transitions)} ease');
 			height: inherit;
-			left: 1.25em;
 			line-height: inherit;
-			position: absolute;
-			top: 0;
+			margin: 0;
 
 			a {
 				border: 0;
@@ -1463,7 +1491,7 @@
 		&.alt {
 			background: transparent;
 
-			h1 {
+			#logo-container {
 				@include vendor('pointer-events', 'none');
 				opacity: 0;
 			}
@@ -1482,6 +1510,15 @@
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+
+		h2 {
+			line-height: 0;
+		}
+
+		img {
+			width: 300px;
+			margin: 0 auto;
+		}
 
 		h2 {
 			@include vendor('transform', 'scale(1)');
@@ -1823,6 +1860,61 @@
 
 			#footer {
 				background-color: darken(_palette(bg), 8);
+			}
+		}
+	}
+/* Conctact */
+	#contact {
+		.button {
+			min-width: 50%;
+
+			@include breakpoint(medium) {
+				min-width: 70%;
+			}
+
+			@include breakpoint(small) {
+				min-width: 90%;
+			}
+
+			@include breakpoint(xsmall) {
+				min-width: 100%;
+			}
+		}
+	}
+
+/* Events */
+	#events {
+		section {
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			p {
+				margin: 0;
+			}
+
+			div:nth-child(1) {
+				width: 42%;
+			}
+
+			div:nth-child(2) {
+				width: 42%;
+			}
+
+			&.long {
+				display: block;
+
+				div {
+					width: 100%;
+				}
+			}
+
+			@include breakpoint(medium) {
+				flex-direction: column;
+
+				div {
+					width: 100%!important;
+				}
 			}
 		}
 	}
