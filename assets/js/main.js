@@ -22,7 +22,7 @@
 			$wrapper = $('#page-wrapper'),
 			$banner = $('#banner'),
 			$header = $('#header');
-
+		
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
@@ -93,6 +93,8 @@
 					leave:		function() { $header.removeClass('alt'); }
 				});
 
+			} else {
+				$header.removeClass('alt');
 			}
 
 	});
