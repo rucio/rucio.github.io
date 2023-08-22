@@ -1,6 +1,46 @@
 @charset "UTF-8";
 @import 'font-awesome.min.css';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
+
+.personcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 0.5rem;
+}
+
+.personcard_image {
+    width: 200px;
+    flex: none;
+}
+
+.personcard_image > img {
+  display: block;
+  border-radius: 3px;
+  width: 200px;
+  height: auto;
+}
+
+.personcard_text {
+    margin-left: 1rem;
+    flex-grow: 1;
+    padding: 0.25rem;
+}
+
+.personcard_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.personcard_link {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
 /*
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
@@ -1859,7 +1899,9 @@ input[type=radio] + label:before {
 .icon.style1 {
   color: #00ffcc;
 }
-.icon.style2 {
+            
+
+sicon.style2 {
   color: #00f0ff;
 }
 .icon.style3 {
