@@ -20,15 +20,13 @@
 
   <title>Rucio - Scientific Data Management</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <link rel="me" href="https://fosstodon.org/@rucio" />
-  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 </head>
 
-<body class="landing">
+<body class="landing is-preload">
 
   <!-- Page Wrapper -->
   <div id="page-wrapper">
@@ -43,19 +41,19 @@
 
       <nav id="nav-desktop">
         <ul>
-          <li><a class="icon fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
+          <li><a class="icon solid fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
           <li>-</li>
-          <li><a class="icon fa-file-text-o" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
+          <li><a class="icon solid fa-file-archive" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
           <li>-</li>
-          <li><a class="icon fa-users" href="team.html">&nbsp;Team</a></li>
+          <li><a class="icon solid fa-users" href="team.html">&nbsp;Team</a></li>
           <li>-</li>
-          <li><a class="icon fa-globe" href="community.html">&nbsp;Community</a></li>
+          <li><a class="icon solid fa-globe" href="community.html">&nbsp;Community</a></li>
           <li>-</li>
-          <li><a class="icon fa-comments-o" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
+          <li><a class="icon solid fa-comments" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
           <li>-</li>
-          <li><a class="icon fa-book" href="publications.html">&nbsp;Publications</a></li>
+          <li><a class="icon solid fa-book" href="publications.html">&nbsp;Publications</a></li>
           <li>-</li>
-          <li><a class="icon fa-calendar" href="events.html">&nbsp;Events</a></li>
+          <li><a class="icon solid fa-calendar" href="events.html">&nbsp;Events</a></li>
         </ul>
       </nav>
       <nav id="nav">
@@ -63,14 +61,14 @@
           <li class="special">
             <a href="#menu" class="menuToggle"></a>
             <div id="menu">
-              <ul>
-                <li><a class="icon fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
-                <li><a class="icon fa-file-text-o" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
-                <li><a class="icon fa-users" href="team.html">&nbsp;Team</a></li>
-                <li><a class="icon fa-globe" href="community.html">&nbsp;Community</a></li>
-                <li><a class="icon fa-comments-o" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
-                <li><a class="icon fa-book" href="publications.html">&nbsp;Publications</a></li>
-                <li><a class="icon fa-calendar" href="events.html">&nbsp;Events</a></li>
+              <ul> 
+                <li><a class="icon solid fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
+                <li><a class="icon solid fa-file-archive" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
+                <li><a class="icon solid fa-users" href="team.html">&nbsp;Team</a></li>
+                <li><a class="icon solid fa-globe" href="community.html">&nbsp;Community</a></li>
+                <li><a class="icon solid fa-comments" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
+                <li><a class="icon solid fa-book" href="publications.html">&nbsp;Publications</a></li>
+                <li><a class="icon solid fa-calendar" href="events.html">&nbsp;Events</a></li>
               </ul>
             </div>
           </li>
@@ -87,8 +85,8 @@
       </div>
 
 	  <div class="inner">
-        <ul class="actions" style="padding-top:10%;">
-          <li><a href="https://indico.cern.ch/e/rucio2024" class="button special"><em>7th Rucio Community Workshop on 30 Sep - 04 Oct 2024</em></a></li>
+        <ul class="actions special" style="padding-top:10%;">
+          <li><a href="https://indico.cern.ch/e/rucio2024" class="button primary"><em>7th Rucio Community Workshop on 30 Sep - 04 Oct 2024</em></a></li>
         </ul>
       </div>
 
@@ -183,43 +181,43 @@
           <h2>Features?</h2>
         </header>
         <ul class="features">
-          <li class="icon fa-lightbulb-o">
+          <li class="icon solid fa-lightbulb">
             <h3>Smart namespace</h3>
             <p>Organise your files in datasets and containers, create virtual overlaps, distribute them by
               scope, or attach important metadata.</p>
           </li>
-          <li class="icon fa-cloud">
+          <li class="icon solid fa-cloud">
             <h3>Storage support</h3>
             <p>Rucio connects your existing storage, and you can easily add new and different ones. Even
               tapes, cloud-based storage, or supercomputers. We want you to have choice and not lock you
               down to a single solution.</p>
           </li>
-          <li class="icon fa-cogs">
+          <li class="icon solid fa-cogs">
             <h3>Easy integration</h3>
             <p>Existing applications and workflow systems can be integrated easily through our open
               libraries and REST servers. Rucio will not disrupt your experiment's workflows.</p>
           </li>
-          <li class="icon fa-lock">
+          <li class="icon solid fa-lock">
             <h3>Authentication and authorisation</h3>
             <p>The classic username/password, x509 certificates with proxy support, GSS/Kerberos, SSH public
               keys, OpenID Connect, and SAML are all supported.</p>
           </li>
-          <li class="icon fa-bar-chart">
+          <li class="icon solid fa-chart-bar">
             <h3>Monitoring</h3>
             <p>Directly integrated with ElasticSearch and Graphite, so you will never lose track of your
               data. Follow system performance from a single file to the global overview.</p>
           </li>
-          <li class="icon fa-code">
+          <li class="icon solid fa-code">
             <h3>Open source powered</h3>
             <p>Robust code written in the Python language, unit-tested, PEP-certified. Deploy with pip or
               containers. It's free as in freedom (Apache v2) and open source! </p>
           </li>
-          <li class="icon fa-wrench">
+          <li class="icon solid fa-wrench">
             <h3>Consistency</h3>
             <p>Data loss happens every day, and Rucio is prepared. Smart consistency and recovery mechanisms
               help you not to lose your data!.</p>
           </li>
-          <li class="icon fa-heart">
+          <li class="icon solid fa-heart">
             <h3>Proven track record</h3>
             <p>Originally built to withstand the requirements of the high-energy physics experiment ATLAS,
               Rucio is scalable and robust; But also serving smaller communities, Rucio makes a
@@ -237,7 +235,7 @@
           <p>We are always happy to chat. You can drop us a mail and we will reply as quickly as possible.</p>
         </header>
         <ul class="actions vertical">
-          <li><a href="http://rucio.cern.ch/documentation/contact_us" class="button special">Contact us</a></li>
+          <li><a href="http://rucio.cern.ch/documentation/contact_us" class="button special primary">Contact us</a></li>
         </ul>
 
       </div>
@@ -246,10 +244,10 @@
     <!-- Footer -->
     <footer id="footer">
       <ul class="icons">
-        <li><a href="https://github.com/rucio" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="http://rucio.cern.ch/documentation/contact_us" class="icon fa-comments"><span class="label">Contact
+        <li><a href="https://github.com/rucio" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="http://rucio.cern.ch/documentation/contact_us" class="icon solid fa-comments"><span class="label">Contact
               Us</span></a></li>
-        <li><a href="mailto:rucio-contact@cern.ch" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+        <li><a href="mailto:rucio-contact@cern.ch" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
       </ul>
       <ul class="copyright">
         <li>Website template by: <a href="http://html5up.net">HTML5 UP</a></li>
@@ -259,14 +257,15 @@
 
   </div>
 
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/skel.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-  <script src="assets/js/main.js"></script>
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 
 </body>
 

@@ -20,11 +20,10 @@
 
   <title>Rucio - Scientific Data Management :: Community</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link rel="me" href="https://fosstodon.org/@rucio" />
 </head>
 
 <body class="landing">
@@ -33,7 +32,7 @@
   <div id="page-wrapper">
 
     <!-- Header -->
-    <header id="header" class="alt">
+    <header id="header">
       <a href="index.html">
         <span id="logo-container">
           <img src='images/wide_logo2.png' />
@@ -42,19 +41,19 @@
 
       <nav id="nav-desktop">
         <ul>
-          <li><a class="icon fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
+          <li><a class="icon solid fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
           <li>-</li>
-          <li><a class="icon fa-file-text-o" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
+          <li><a class="icon solid fa-file-archive" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
           <li>-</li>
-          <li><a class="icon fa-users" href="team.html">&nbsp;Team</a></li>
+          <li><a class="icon solid fa-users" href="team.html">&nbsp;Team</a></li>
           <li>-</li>
-          <li><a class="icon fa-globe" href="community.html">&nbsp;Community</a></li>
+          <li><a class="icon solid fa-globe" href="community.html">&nbsp;Community</a></li>
           <li>-</li>
-          <li><a class="icon fa-comments-o" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
+          <li><a class="icon solid fa-comments" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
           <li>-</li>
-          <li><a class="icon fa-book" href="publications.html">&nbsp;Publications</a></li>
+          <li><a class="icon solid fa-book" href="publications.html">&nbsp;Publications</a></li>
           <li>-</li>
-          <li><a class="icon fa-calendar" href="events.html">&nbsp;Events</a></li>
+          <li><a class="icon solid fa-calendar" href="events.html">&nbsp;Events</a></li>
         </ul>
       </nav>
       <nav id="nav">
@@ -62,14 +61,14 @@
           <li class="special">
             <a href="#menu" class="menuToggle"></a>
             <div id="menu">
-              <ul>
-                <li><a class="icon fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
-                <li><a class="icon fa-file-text-o" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
-                <li><a class="icon fa-users" href="team.html">&nbsp;Team</a></li>
-                <li><a class="icon fa-globe" href="community.html">&nbsp;Community</a></li>
-                <li><a class="icon fa-comments-o" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
-                <li><a class="icon fa-book" href="publications.html">&nbsp;Publications</a></li>
-                <li><a class="icon fa-calendar" href="events.html">&nbsp;Events</a></li>
+              <ul> 
+                <li><a class="icon solid fa-code" href="https://github.com/rucio/rucio">&nbsp;Source</a></li>
+                <li><a class="icon solid fa-file-archive" href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
+                <li><a class="icon solid fa-users" href="team.html">&nbsp;Team</a></li>
+                <li><a class="icon solid fa-globe" href="community.html">&nbsp;Community</a></li>
+                <li><a class="icon solid fa-comments" href="http://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
+                <li><a class="icon solid fa-book" href="publications.html">&nbsp;Publications</a></li>
+                <li><a class="icon solid fa-calendar" href="events.html">&nbsp;Events</a></li>
               </ul>
             </div>
           </li>
@@ -83,27 +82,27 @@
           <h2>Community</h2>
         </header>
 
-          <h2>ATLAS <a class="icon fa-home" href="https://atlas.cern/"></a> <a class="icon fa-linkedin" href="https://www.linkedin.com/company/atlas-collaboration/"></a></h2>
+          <h2>ATLAS <a class="icon solid fa-home" href="https://atlas.cern/"></a> <a class="icon brands fa-linkedin" href="https://www.linkedin.com/company/atlas-collaboration/"></a></h2>
 	      <p><span class="image left"><img src="images/community/ATLAS.png" alt="" /></span>The ATLAS Experiment is one of the four major experiments at the Large Hadron Collider (LHC). Approaching one Exabyte of data on disk and tape in 2024, ATLAS has always been one of the largest scientific data producers in the world. A well-integrated, resilient, and efficient data management solution is crucial to overall experiment performance and ATLAS was in need of a better solution by the end of LHC Run-1 in 2012. Thus ATLAS invested heavily in the design and development of a new system called Rucio to ensure scalability for future LHC upgrades, allow expressive policies for our data flow needs, connect with our distributed computing infrastructure, automate operational tasks as much as possible, integrate new technologies from the storage and network areas, and combine all this within a modular and extensible architecture. When Rucio was first put in production in 2014, the improvements it brought into ATLAS data management were substantial and also attracted a lot of interest by the wider science community. By now, Rucio manages all ATLAS data, including centrally produced and user-generated, totalling over a billion files distributed across 120+ scientific data centers. Rucio orchestrates daily transfers of tens of Petabytes, ensures optimal usage of our network infrastructure, takes care of seamless integration between scientific storage, supercomputers, and commercial clouds, as well as provides various interfaces to make the daily life of scientists more comfortable. Rucio has also matured into an open-source community project, and we are extremely happy about its continued success. The idea of a common data management system, in use by many communities with similar needs, is a guiding principle for us and we will continue to invest into our shared future.</p>
 
-          <h2>CMS <a class="icon fa-home" href="https://cms.cern/"></a></h2>
+          <h2>CMS <a class="icon solid fa-home" href="https://cms.cern/"></a></h2>
 	      <p><span class="image right"><img src="images/community/CMS.png" alt="" /></span>The CMS Collaboration brings together members of the particle physics community from across the globe in a quest to advance humanity’s knowledge of the very basic laws of our Universe. CMS has over 4000 particle physicists, engineers, computer scientists, technicians and students from around 240 institutes and universities from more than 50 countries.</p>
           <p>The collaboration operates and collects data from the Compact Muon Solenoid, one of two general-purpose particle detectors at CERN’s Large Hadron Collider. Data collected by CMS are distributed to CMS institutions in over forty countries for physics analysis.</p>
           <p>In 2018, CMS embarked on a process to select a new data management solution. The previous solution was over a decade old, difficult to maintain, and would not easily adapt to the data rates and technologies used for data transfers in the HL-LHC era. As a result of this selection process, CMS decided to adopt Rucio which was, at the time, used by on major experiment and a couple of smaller experiments.</p>
           <p>This choice has been a good one for CMS, allowing them to no longer operate a service at each of more than 50 data sites, to scale easily to new rates of data transfer, and to adopt new technologies for data transfer as needed. CMS aggregate data rates, managed by Rucio, regularly top 40 GB/s and have been proven to reach 100 GB/s.</p>
 
-          <h2>ESCAPE<a class="icon fa-home" href="https://projectescape.eu"></a> <a class="icon fa-twitter" href="https://twitter.com/ESCAPE_EU"></a>  <a class="icon fa-linkedin" href="https://www.linkedin.com/company/projectescape/"></a> <a class="icon fa-youtube" href="https://www.youtube.com/channel/UC05braEQdP2rCSUamHm9I_Q"></a> </h2>
+          <h2>ESCAPE<a class="icon solid fa-home" href="https://projectescape.eu"></a> <a class="icon brands fa-twitter" href="https://twitter.com/ESCAPE_EU"></a>  <a class="icon brands fa-linkedin" href="https://www.linkedin.com/company/projectescape/"></a> <a class="icon brands fa-youtube" href="https://www.youtube.com/channel/UC05braEQdP2rCSUamHm9I_Q"></a> </h2>
           <p><span class="image left"><img src="images/community/ESCAPE.png" alt="" /></span>ESCAPE (European Science Cluster of Astronomy & Particle physics ESFRI research infrastructures) brings together the astronomy, astroparticle and particle physics communities. Establishing a collaborative cluster of next generation ESFRI facilities to implement a functional link between the concerned ESFRIs and the European Open Science Cloud (EOSC).</p>
 		  <p>ESCAPE aims to produce versatile solutions, with great potential for discovery, to support the implementation of EOSC thanks to open data management, cross-border and multi-disciplinary open environment, according to FAIR (Findable, Accessible, Interoperable and Reusable) principles. Key outputs of  ESCAPE collaboration include Data Infrastructure for Open Science, Science Analysis Platform, Software Repositories, Citizen Science activities and  training/education activities.</p>
 		  <p>Since 2023 ESCAPE evolved to a long standing Collaboration Agreement to continue addressing the challenges shared by its partners and the relevant communities for the implementation of open-science practices and the management of FAIR digital research objects into the core operation of ESFRI projects, landmark projects and other relevant world class RIs. These challenges are technical, operational, sociological and scientific.</p>
 		  <p>ESCAPE has chosen Rucio as its data management solution. This move signifies a significant step towards enhancing and streamlining the data distribution, management, and analysis processes within the scientific community. Since then <a href="https://www.ctao.org">CTAO</a>, <a href="https://www.skao.int">SKA</a> and the <a href="https://rubinobservatory.org">Vera C. Rubin Observatory</a> have officially selected Rucio as their data management solution.</p>
 	
-          <h2>Belle II <a class="icon fa-home" href="https://www.belle2.org/"></a> <a class="icon fa-facebook" href="https://www.facebook.com/belle2collab"></a> <a class="icon fa-twitter" href="https://x.com/belle2collab"></a></h2>
+          <h2>Belle II <a class="icon solid fa-home" href="https://www.belle2.org/"></a> <a class="icon brands fa-facebook" href="https://www.facebook.com/belle2collab"></a> <a class="icon brands fa-twitter" href="https://x.com/belle2collab"></a></h2>
 	      <p><span class="image right"><img src="images/community/BelleII.png" alt="" /></span>The Belle II experiment is a particle physics experiment located at High Energy Accelerator Research Organization (KEK) in Tsukuba, Japan. It is the successor to the Belle experiment operated from 1999 to 2010 and expected to collect around 50 times more data. In order to be able to manage this huge volume of data, Belle II decided to move to Rucio that has demonstrated its capabilities at scales much higher than the current volume managed by Belle II (over hundred million files, more than 25 Petabytes) and that will be able to cope with the volume expected in the future.</p>
 		  <p>Since January 2021, Rucio is responsible for managing all the data produced across the data centers used by Belle II over their full lifecycle. In particular it ensures the proper replication of all the data according to the replication policies of Belle II. Rucio fits very well to Belle II needs and it allowed to simplify and automate many tasks.</p>
 		  <p>At the beginning of 2024, Rucio was also chosen to become the official metadata service of Belle II in the near future after a careful evaluation. We expect to gain immediate benefits from it when this functionality is enabled in production.</p> 
 
-          <h2>DUNE <a class="icon fa-home" href="https://www.dunescience.org"></a> <a class="icon fa-facebook" href="http://www.facebook.com/DUNEscience/"></a></h2>
+          <h2>DUNE <a class="icon solid fa-home" href="https://www.dunescience.org"></a> <a class="icon brands fa-facebook" href="http://www.facebook.com/DUNEscience/"></a></h2>
 	      <p><span class="image left"><img src="images/community/DUNE.jpeg" alt="" /></span>The Deep Underground Neutrino Experiment (DUNE) is an international experiment exploring the origins of matter, the ordering of neutrino masses, and potentially the formation of black holes through the observation of neutrinos from supernova core collapse. DUNE consists of two neutrino detectors situated underground with roughly 1300 km between the near and far detectors. The near detector will be located on site at Fermi National Accelerator Laboratory with the far detector located 4850 ft underground at Sanford Underground Research Facility in Lead, SD. These detectors will be exposed to the neutrinos created by the Long Baseline Neutrino Facility at Fermilab.</p>
           <p>The raw data produced from the DUNE detectors are unique compared with other HEP experiments for both readout of neutrino interactions and observation of astrophysical events. The DUNE far detectors will consist of several large Liquid Argon Time Projection Chambers filled with approximately 17 kilotons of liquid argon. The far detector data produced from a single trigger of DAQ can vary in size from 100 MB for neutrino interaction candidates to larger than 100 TB for supernova burst candidates. The cataloging and replication of the large data volumes poses an interesting challenge for DUNE when trying to optimize workflows with large I/O requirements based upon these large volume trigger records. From the beginning, DUNE chose Rucio to manage data distribution, replication, and removal. As well, DUNE has become an active part of the Rucio development community as the experiment brings unique needs to data management.</p>
       </div>
@@ -117,7 +116,7 @@
             </p>
           </header>
           <ul class="actions vertical">
-            <li><a href="http://rucio.cern.ch/documentation/contact_us" class="button special">Contact us</a></li>
+            <li><a href="http://rucio.cern.ch/documentation/contact_us" class="button special primary">Contact us</a></li>
           </ul>
 
         </div>
@@ -126,12 +125,9 @@
       <!-- Footer -->
       <footer id="footer">
         <ul class="icons">
-          <li><a href="https://github.com/rucio" class="icon fa-github"><span class="label">GitHub</span></a>
-          </li>
-          <li><a href="http://rucio.cern.ch/documentation/contact_us" class="icon fa-comments"><span
-                class="label">Contact Us</span></a></li>
-          <li><a href="mailto:rucio-contact@cern.ch" class="icon fa-envelope-o"><span class="label">Email</span></a>
-          </li>
+          <li><a href="https://github.com/rucio" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+          <li><a href="http://rucio.cern.ch/documentation/contact_us" class="icon solid fa-comments"><span class="label">Contact Us</span></a></li>
+          <li><a href="mailto:rucio-contact@cern.ch" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
         </ul>
         <ul class="copyright">
           <li>Website template by: <a href="http://html5up.net">HTML5 UP</a></li>
@@ -141,14 +137,15 @@
 
     </section>
   </div>
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/skel.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-  <script src="assets/js/main.js"></script>
+		<!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 
 </body>
 
