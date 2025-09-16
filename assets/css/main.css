@@ -3669,7 +3669,7 @@ body.is-menu-visible #menu {
 	-webkit-transition: background-color 0.2s ease;
 	-ms-transition: background-color 0.2s ease;
 	transition: background-color 0.2s ease;
-	background: #2e3842;
+	background: #000000;
 	height: 5em;
 	left: 0;
 	line-height: 3em;
@@ -4120,8 +4120,32 @@ body.is-mobile #main>header {
 
 #footer {
 	padding: 6em 0 4em 0;
-	background-color: #1d242a;
+	background-color: #000000;
 	text-align: center;
+}
+
+/* CERN Footer Styling */
+.cern-footer {
+	margin: 2em 0 1em 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cern-logo-link {
+	border: none;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.cern-logo-link:hover {
+	border-bottom: none;
+}
+
+.cern-logo {
+	height: 80px;
+	width: auto;
+	opacity: 1.0;
 }
 
 #footer .icons {
@@ -4193,6 +4217,16 @@ body.is-mobile #main>header {
 		padding: 3em 2em 1em 2em;
 	}
 
+	.cern-footer {
+		margin: 1.5em 0 0.5em 0;
+		justify-content: center;
+	}
+
+	.cern-logo {
+		height: 60px;
+		width: auto;
+	}
+
 }
 
 /* Landing */
@@ -4210,7 +4244,7 @@ body.landing #page-wrapper {
 }
 
 body.landing #footer {
-	background-color: rgba(29, 36, 42, 0.9);
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 body.is-mobile.landing #page-wrapper {
@@ -4229,7 +4263,7 @@ body.is-mobile.landing .wrapper.style4 {
 }
 
 body.is-mobile.landing #footer {
-	background-color: #1d242a;
+	background-color: #000000;
 }
 
 #header #logo-container {
