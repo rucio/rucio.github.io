@@ -3702,6 +3702,25 @@ body.is-mobile #nav-desktop {
 	display: none;
 }
 
+/* Responsive navigation spacing for smaller screens */
+@media screen and (max-width: 1280px) {
+	#nav-desktop {
+		left: 160px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	#nav-desktop {
+		left: 140px;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	#nav-desktop {
+		left: 120px;
+	}
+}
+
 body.is-mobile h1 a {
 	font-size: 0.8em;
 }
@@ -3710,8 +3729,9 @@ body.is-mobile h1 a {
 	height: inherit;
 	line-height: inherit;
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 1em;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #header #nav>ul {
@@ -3775,11 +3795,11 @@ body.is-mobile #header #nav>ul>li>a.menuToggle {
 }
 
 #header.alt #logo-container {
-	-moz-pointer-events: none;
-	-webkit-pointer-events: none;
-	-ms-pointer-events: none;
-	pointer-events: none;
-	opacity: 0;
+	-moz-pointer-events: auto;
+	-webkit-pointer-events: auto;
+	-ms-pointer-events: auto;
+	pointer-events: auto;
+	opacity: 1;
 }
 
 #header.alt h1 {
@@ -4234,11 +4254,15 @@ body.is-mobile.landing #footer {
 
 #header #logo-container {
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 1.25em;
-	display: none;
-	height: 100%;
+	transform: translateY(-50%);
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
 	align-items: center;
+	z-index: 10001;
 }
 
 body.is-mobile #header #logo-container {
@@ -4252,9 +4276,19 @@ body.is-mobile #header #logo-container {
 	height: 30px;
 }
 
+#header #logo-container:hover {
+	opacity: 0.8;
+}
+
 /* Desktop Menu */
 #nav-desktop {
-	flex-direction: row;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 200px;
+	right: 3em;
+	display: flex;
+	align-items: center;
 	justify-content: center;
 }
 
@@ -4262,12 +4296,14 @@ body.is-mobile #header #logo-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	list-style: none;
-	padding-right: 1em;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 #nav-desktop ul>li {
-	border-top: solid 1px rgba(0, 0, 0, 0.125);
 	margin: auto;
 	padding: 0.5em 1px 0 0;
 }
