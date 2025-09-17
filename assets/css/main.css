@@ -1,6 +1,108 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic");
 
+/* CERN Toolbar Styles */
+.cern-toolbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background-color: rgba(30, 30, 30, 0.95);
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	z-index: 10002;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	line-height: 40px;
+	border: none;
+	margin: 0;
+	box-shadow: none;
+}
+
+.cern-toolbar a {
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	transition: color 0.2s ease;
+}
+
+.cern-toolbar a:hover {
+	color: #ccc;
+	border: none;
+	outline: none;
+}
+
+.cern-toolbar a:focus {
+	color: #ccc;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+.cern-toolbar a:active {
+	color: #ccc;
+	border: none;
+	outline: none;
+}
+
+.cern-toolbar-left {
+	display: flex;
+	align-items: center;
+}
+
+.cern-toolbar-right {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.cern-toolbar-logo {
+	font-weight: 600;
+	margin-right: 10px;
+	border: none;
+	outline: none;
+}
+
+.cern-toolbar-tagline {
+	font-weight: 300;
+	color: #ccc;
+	border: none;
+	outline: none;
+}
+
+/* Adjust body padding to account for fixed toolbar and header */
+body {
+	padding-top: 120px; /* 40px for CERN toolbar + 80px for site header */
+}
+
+/* Mobile responsive styles for CERN toolbar */
+@media (max-width: 768px) {
+	.cern-toolbar {
+		padding: 0 10px;
+		font-size: 12px;
+	}
+	
+	.cern-toolbar-right {
+		gap: 15px;
+	}
+	
+	.cern-toolbar-tagline {
+		display: none;
+	}
+	
+	/* Ensure proper spacing on mobile */
+	body {
+		padding-top: 120px; /* Maintain same spacing on mobile */
+	}
+}
+
 .personcard {
 	display: flex;
 	flex-direction: row;
@@ -3674,9 +3776,9 @@ body.is-menu-visible #menu {
 	left: 0;
 	line-height: 3em;
 	position: fixed;
-	top: 0;
+	top: 40px;
 	width: 100%;
-	z-index: 10000;
+	z-index: 10001;
 }
 
 #header h1 {
