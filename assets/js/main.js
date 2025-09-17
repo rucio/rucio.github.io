@@ -21,11 +21,58 @@
 			xsmall:   [ null,      '480px'  ]
 		});
 
+	// CERN Loader functionality - (slow loading)
+		var loaderCreated = false;
+		var pageLoadStart = Date.now();
+		
+		function createCERNLoader() {
+			// Only create if it doesn't exist and hasn't been created yet
+			if (!loaderCreated && $('#cern-loader').length === 0) {
+				var loaderHTML = '<div id="cern-loader">' +
+					'<div class="cern-loader-content">' +
+					'<img src="images/loader.gif" alt="CERN Loader" class="cern-loader-gif">' +
+					'</div>' +
+					'</div>';
+				$body.prepend(loaderHTML);
+				loaderCreated = true;
+			}
+		}
+		
+		function hideCERNLoader() {
+			var $loader = $('#cern-loader');
+			if ($loader.length && !$loader.hasClass('loaded')) {
+				$loader.addClass('loaded');
+				// Remove loader from DOM after transition
+				window.setTimeout(function() {
+					$loader.remove();
+					loaderCreated = false;
+				}, 150);
+			}
+		}
+		
+		// Only show loader if page takes longer than 800ms to load
+		var loaderTimeout = window.setTimeout(function() {
+			// Check if page is still loading after 800ms
+			if ($body.hasClass('is-preload')) {
+				createCERNLoader();
+			}
+		}, 800);
+		
+		// Hide loader if it takes too long (fallback - 5 seconds)
+		var maxTimeout = window.setTimeout(function() {
+			hideCERNLoader();
+		}, 5000);
+
 	// Play initial animations on page load.
 		$window.on('load', function() {
+			var loadTime = Date.now() - pageLoadStart;
+			
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
-			}, 100);
+				clearTimeout(loaderTimeout);
+				clearTimeout(maxTimeout);
+				hideCERNLoader();
+			}, 50);
 		});
 
 	// Mobile?
