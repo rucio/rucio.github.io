@@ -18,7 +18,7 @@ function createHeader(className = '') {
           <li>-</li>
           <li><a class="icon solid fa-globe" href="community.html">&nbsp;Community</a></li>
           <li>-</li>
-          <li><a class="icon solid fa-comments" href="https://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>       
+          <li><a class="icon solid fa-comments" href="contact.html">&nbsp;Communication</a></li>       
           <li>-</li>
           <li><a class="icon solid fa-book" href="publications.html">&nbsp;Publications</a></li>
           <li>-</li>
@@ -36,7 +36,7 @@ function createHeader(className = '') {
                     href="https://rucio.cern.ch/documentation">&nbsp;Documentation</a></li>
                 <li><a class="icon solid fa-users" href="team.html">&nbsp;Team</a></li>
                 <li><a class="icon solid fa-globe" href="community.html">&nbsp;Community</a></li>
-                <li><a class="icon solid fa-comments" href="https://rucio.cern.ch/documentation/contact_us">&nbsp;Communication</a></li>
+                <li><a class="icon solid fa-comments" href="contact.html">&nbsp;Communication</a></li>
                 <li><a class="icon solid fa-book" href="publications.html">&nbsp;Publications</a></li>
                 <li><a class="icon solid fa-calendar" href="events.html">&nbsp;Events</a></li>
               </ul>

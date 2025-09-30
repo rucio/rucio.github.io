@@ -8,7 +8,7 @@ function createCTA(styleClass = 'style4') {
           <p>We are always happy to chat. You can drop us a mail and we will reply as quickly as possible.</p>
         </header>
         <ul class="actions vertical">
-          <li><a href="https://rucio.cern.ch/documentation/contact_us" class="button special primary">Contact us</a></li>
+          <li><a href="contact.html" class="button special primary">Contact us</a></li>
         </ul>
       </div>
     </section>`;
