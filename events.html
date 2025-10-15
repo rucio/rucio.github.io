@@ -31,7 +31,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2024_7th_workshop_group_photo_ORIGINAL.jpg" target="_blank">
-              <img class="image" src="images/events/2024_7th_workshop_group_photo.jpg" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2024_7th_workshop_group_photo_thumb.jpg" data-src="images/events/2024_7th_workshop_group_photo.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -47,7 +47,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2023_Dirac_RucioWS_groupphoto_ORIGINAL.jpg" target="_blank">
-              <img class="image" src="images/events/2023_Dirac_RucioWS_groupphoto.jpg" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2023_Dirac_RucioWS_groupphoto_thumb.jpg" data-src="images/events/2023_Dirac_RucioWS_groupphoto.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -64,7 +64,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2022_5th_workshop_group_photo_ORIGINAL.jpg" target="_blank">
-              <img class="image" src="images/events/2022_5th_workshop_group_photo.jpg" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2022_5th_workshop_group_photo_thumb.jpg" data-src="images/events/2022_5th_workshop_group_photo.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -81,7 +81,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2021_4th_workshop_group_photo_ORIGINAL.png" target="_blank">
-              <img class="image" src="images/events/2021_4th_workshop_group_photo.png" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2021_4th_workshop_group_photo_thumb.jpg" data-src="images/events/2021_4th_workshop_group_photo.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -101,7 +101,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2020_3rd_rucio_workshop_ORIGINAL.png" target="_blank">
-              <img class="image" src="images/events/2020_3rd_rucio_workshop.png" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2020_3rd_rucio_workshop_thumb.jpg" data-src="images/events/2020_3rd_rucio_workshop.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -118,7 +118,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2019_second_coding_camp_ORIGINAL.png" target="_blank">
-              <img class="image" src="images/events/2019_second_coding_camp.png" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2019_second_coding_camp_thumb.jpg" data-src="images/events/2019_second_coding_camp.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -135,7 +135,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2019_second_rucio_workshop_ORIGINAL.jpg" target="_blank">
-              <img class="image" src="images/events/2019_second_rucio_workshop.jpg" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2019_second_rucio_workshop_thumb.jpg" data-src="images/events/2019_second_rucio_workshop.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -153,7 +153,7 @@
         <section class="bottom-margin">
           <div>
             <a href="images/events/2018_first_coding_camp_ORIGINAL.jpg" target="_blank">
-              <img class="image" src="images/events/2018_first_coding_camp.jpg" alt="Workshop Group Photo" />
+              <img class="image" src="images/events/2018_first_coding_camp_thumb.jpg" data-src="images/events/2018_first_coding_camp.jpg" alt="Workshop Group Photo" loading="lazy" />
             </a>
           </div>
           <div>
@@ -202,6 +202,43 @@
     <script src="assets/js/footer.js"></script>
     <script src="assets/js/cta.js"></script>
     <script src="assets/js/scripts.js"></script>
+    
+    <!-- Progressive Image Loading -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img[data-src]');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              const highQualitySrc = img.getAttribute('data-src');
+              
+              // Create a new image to preload the high-quality version
+              const highQualityImg = new Image();
+              highQualityImg.onload = function() {
+                // Smoothly transition to high-quality image
+                img.style.transition = 'opacity 0.3s ease-in-out';
+                img.style.opacity = '0.8';
+                setTimeout(() => {
+                  img.src = highQualitySrc;
+                  img.style.opacity = '1';
+                  img.removeAttribute('data-src');
+                }, 150);
+              };
+              highQualityImg.src = highQualitySrc;
+              
+              observer.unobserve(img);
+            }
+          });
+        }, {
+          rootMargin: '50px 0px',
+          threshold: 0.1
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+      });
+    </script>
 
 </body>
 
