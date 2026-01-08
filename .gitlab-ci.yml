@@ -1,0 +1,15 @@
+# GitLab CI Configuration for Rucio Website 
+
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    - cp -r . public
+    - rm -rf public/.git public/.github public/.gitlab-ci.yml
+
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
