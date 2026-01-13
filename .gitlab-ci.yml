@@ -5,8 +5,10 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-    - cp -r . public
-    - rm -rf public/.git public/.github public/.gitlab-ci.yml
+    - mkdir public
+    - cp -r assets public/
+    - cp -r images public/
+    - cp *.html public/
 
   artifacts:
     paths:
