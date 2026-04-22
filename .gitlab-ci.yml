@@ -1,15 +1,88 @@
-# GitLab CI Configuration for Rucio Website 
+# GitLab CI configuration for combined Rucio website + documentation deployment
+# ==============================================================================
+# Builds and deploys both the Rucio website and its documentation to GitLab Pages.
+#
+# How it works:
+# 1. build_site  — Copies the static website assets (HTML, images, etc.) into site-build/
+# 2. fetch_docs  — Clones the pre-built documentation from the rucio/documentation
+#                  gh-pages branch into docs-build/
+# 3. assemble_public — Merges both artifacts: website at the root of public/,
+#                      documentation nested under public/documentation/
+# 4. pages       — GitLab Pages picks up the public/ directory and publishes the site
+#
+# A scheduled pipeline (cron job) runs daily to ensure the documentation stays
+# in sync with the latest content published to the rucio/documentation gh-pages branch,
+# even when no new commits are pushed to this repository.
+#
 
-image: alpine:latest
+stages:
+  - build
+  - assemble
+  - deploy
+
+default:
+  image: alpine:latest
+
+variables:
+  DOCS_REPO_URL: "https://github.com/rucio/documentation.git"
+  DOCS_BRANCH: "gh-pages"
+
+build_site:
+  stage: build
+  script:
+    - mkdir -p site-build
+    - cp -r assets site-build/
+    - cp -r images site-build/
+    - cp *.html site-build/
+  artifacts:
+    paths:
+      - site-build/
+    expire_in: 1 day
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+fetch_docs:
+  stage: build
+  script:
+    - apk add --no-cache git
+    - git clone --depth 1 --branch "$DOCS_BRANCH" "$DOCS_REPO_URL" docs-src
+    - mkdir -p docs-build
+    # Copy all static docs content except git metadata
+    - cp -r docs-src/* docs-build/ || true
+    - rm -rf docs-build/.git docs-build/.gitlab-ci.yml
+  artifacts:
+    paths:
+      - docs-build/
+    expire_in: 1 day
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+assemble_public:
+  stage: assemble
+  needs:
+    - job: build_site
+      artifacts: true
+    - job: fetch_docs
+      artifacts: true
+  script:
+    - mkdir -p public
+    - cp -r site-build/* public/
+    - mkdir -p public/documentation
+    - cp -r docs-build/* public/documentation/
+  artifacts:
+    paths:
+      - public/
+    expire_in: 1 day
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
 
 pages:
   stage: deploy
+  needs:
+    - job: assemble_public
+      artifacts: true
   script:
-    - mkdir public
-    - cp -r assets public/
-    - cp -r images public/
-    - cp *.html public/
-
+    - echo "Publishing Rucio Website and Documentation"
   artifacts:
     paths:
       - public
