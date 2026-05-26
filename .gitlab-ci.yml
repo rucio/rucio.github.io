@@ -33,6 +33,7 @@ build_site:
     - mkdir -p site-build
     - cp -r assets site-build/
     - cp -r images site-build/
+    - cp -r 2026 site-build/
     - cp *.html site-build/
   artifacts:
     paths:
